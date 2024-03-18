@@ -53,6 +53,10 @@ button {
     font-weight: 500;
 }
 
+#mail-button {
+    cursor: pointer;
+}
+
 .no-capitalize {
     text-transform: none;
 }
