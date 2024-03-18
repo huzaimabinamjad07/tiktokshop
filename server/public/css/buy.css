@@ -16,10 +16,14 @@ body {
     text-transform: capitalize;
 }
 
-.card {
+#card {
     margin: 1rem;
 }
 
 #form-box {
     height: 366px !important;
+}
+
+#form-heading {
+    color: #db2777;
 }
