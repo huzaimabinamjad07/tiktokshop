@@ -1,5 +1,3 @@
-const buyButton = document.querySelector("#buy-button");
-
 function sendEmail() {
   const params = {
     from_name: document.querySelector("#name").value,
@@ -26,26 +24,3 @@ function sendEmail() {
     }
   );
 }
-
-buyButton.addEventListener("click", () => {
-  fetch("/create-checkout-session", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      items: [{ id: 1, quantity: 1 }],
-    }),
-  })
-    .then((res) => {
-      if (res.ok) return res.json();
-      return res.json().then((json) => Promise.reject(json));
-    })
-    .then(({ url }) => {
-      console.log(url);
-      //   window.location = url;
-    })
-    .catch((e) => {
-      console.log(e.error);
-    });
-});
