@@ -5,7 +5,7 @@ function sendEmail() {
     message: document.querySelector("#message").value,
   };
 
-  emailjs.send("service_hzcp9i6", "template_3lo5ckp", params).then(
+  emailjs.send("service_y6qkl6i", "template_j2oenkf", params).then(
     function () {
       document.querySelector("#email-message").textContent =
         "✅ Email Sent Successfully!";
